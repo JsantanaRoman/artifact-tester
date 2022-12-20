@@ -25,7 +25,11 @@ jobs:
     needs: first
     runs-on: ubuntu-latest
     steps:
-      - name: Get artifact
-        run: echo "Hello World"
+      - uses: actions/download-artifact@v3
+        with:
+          name: sprint-name.tar
+      - name: Display structure of downloaded files
+        run: ls -R
+
   
   
