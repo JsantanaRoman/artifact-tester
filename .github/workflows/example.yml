@@ -28,8 +28,9 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: sprint-name.tar
-      - name: Display structure of downloaded files
-        run: ls -R
+      - name: Test Docker Image
+        run: docker load -i docker.tar
+
 
   
   
