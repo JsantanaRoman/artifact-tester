@@ -9,9 +9,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build image
+      - name: Build image & save artifact
         run: |
           docker build -t test_image:latest -<<EOF
           FROM busybox
           RUN touch abc.txt
           EOF
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: ./abc.txt
