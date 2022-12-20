@@ -15,8 +15,10 @@ jobs:
           FROM busybox
           RUN touch abc.txt
           EOF
+          docker save test_image:latest -o /tmp
+
       - uses: actions/upload-artifact@v3
         with:
           name: sprint-name
-          path: /
+          path: /tmp
           if-no-files-found: error
