@@ -15,10 +15,10 @@ jobs:
           FROM busybox
           RUN touch abc.txt
           EOF
-          docker save test_image:latest -o ./docker
+          docker save test_image:latest -o ./docker.tar
 
       - uses: actions/upload-artifact@v3
         with:
           name: sprint-name
-          path: ./docker
+          path: ./docker.tar
           if-no-files-found: error
