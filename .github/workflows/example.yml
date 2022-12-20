@@ -20,5 +20,5 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: sprint-name
-          path: ./docker.tar
+          path: ./docker.tar.tar
           if-no-files-found: error
