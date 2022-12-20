@@ -1,0 +1,19 @@
+{
+  "name": "artifact-tester",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JsantanaRoman/artifact-tester.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JsantanaRoman/artifact-tester/issues"
+  },
+  "homepage": "https://github.com/JsantanaRoman/artifact-tester#readme"
+}
