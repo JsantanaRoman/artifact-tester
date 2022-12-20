@@ -6,7 +6,7 @@ on:
       - "main"
 
 jobs:
-  build:
+  first:
     runs-on: ubuntu-latest
     steps:
       - name: Build image & save artifact
@@ -16,9 +16,16 @@ jobs:
           RUN touch abc.txt
           EOF
           docker save test_image:latest -o ./docker.tar
-
       - uses: actions/upload-artifact@v3
         with:
           name: sprint-name.tar
           path: ./docker.tar
           if-no-files-found: error
+  second:
+    needs: first
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get artifact
+        run: echo "Hello World"
+  
+  
